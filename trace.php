@@ -14,7 +14,7 @@ putenv('OTEL_PHP_FIBERS_ENABLED=true');
 
 // Ensure you provide both parameters: the endpoint and the content type
 $httpTransport = (new OtlpHttpTransportFactory())
-    ->create('http://172.17.0.1:4318/v1/traces', 'application/json');  // Use the correct endpoint for Tempo
+    ->create('http://172.17.0.1:4318/v1/traces', 'application/json');  // Use the correct endpoint for Tempo, here I am using this locally so I had to use docker IP, it may defer as per your machine
 
 $exporter = new SpanExporter($httpTransport);
 
