@@ -1,0 +1,5 @@
+php -S localhost:8000 trace.php
+
+
+
+u have to add 4318 this port of temp to send the traces
